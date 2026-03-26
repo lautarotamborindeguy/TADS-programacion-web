@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicios 11 a 15 - Validación de Formularios</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 20px;
+			line-height: 1.4;
+		}
+
+		h1 {
+			margin-bottom: 16px;
+		}
+
+		h2 {
+			margin-top: 24px;
+			margin-bottom: 8px;
+		}
+
+		p {
+			margin-top: 0;
+			color: #444;
+		}
+
+		form {
+			border: 1px solid #ccc;
+			padding: 12px;
+			max-width: 700px;
+			margin-bottom: 16px;
+		}
+
+		label {
+			display: block;
+			margin-top: 8px;
+			margin-bottom: 4px;
+		}
+
+		input,
+		button {
+			width: 100%;
+			max-width: 420px;
+			padding: 8px;
+			box-sizing: border-box;
+		}
+
+		button {
+			margin-top: 12px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ejercicios de Validación (11 a 15)</h1>
+
+	<h2>11) Campo obligatorio</h2>
+	<p>Este campo no permite enviar el formulario si está vacío.</p>
+	<form action="#" method="post">
+		<label for="nombre-obligatorio">Nombre completo</label>
+		<input type="text" id="nombre-obligatorio" name="nombre_obligatorio" required>
+
+		<button type="submit">Enviar</button>
+	</form>
+
+	<h2>12) Campo de correo electrónico válido</h2>
+	<p>El navegador valida automáticamente el formato del correo.</p>
+	<form action="#" method="post">
+		<label for="correo-valido">Correo electrónico</label>
+		<input type="email" id="correo-valido" name="correo_valido" required>
+
+		<button type="submit">Validar correo</button>
+	</form>
+
+	<h2>13) Campo numérico con límite</h2>
+	<p>Solo se aceptan edades entre 18 y 65 años.</p>
+	<form action="#" method="post">
+		<label for="edad">Edad</label>
+		<input type="number" id="edad" name="edad" min="18" max="65" required>
+
+		<button type="submit">Enviar edad</button>
+	</form>
+
+	<h2>14) Campo con pattern</h2>
+	<p>Formato requerido: 8 dígitos y una letra mayúscula (ejemplo: 12345678A).</p>
+	<form action="#" method="post">
+		<label for="dni">DNI</label>
+		<input
+			type="text"
+			id="dni"
+			name="dni"
+			pattern="[0-9]{8}[A-Z]"
+			title="Debe contener 8 dígitos y una letra mayúscula final, por ejemplo 12345678A"
+			required
+		>
+
+		<button type="submit">Validar DNI</button>
+	</form>
+
+	<h2>15) Formulario validado completo</h2>
+	<p>Incluye validaciones de requerido, email, número y pattern.</p>
+	<form action="#" method="post">
+		<label for="nombre-completo">Nombre completo</label>
+		<input type="text" id="nombre-completo" name="nombre_completo" required>
+
+		<label for="email-completo">Correo electrónico</label>
+		<input type="email" id="email-completo" name="email_completo" required>
+
+		<label for="edad-completa">Edad (18 a 65)</label>
+		<input type="number" id="edad-completa" name="edad_completa" min="18" max="65" required>
+
+		<label for="codigo-postal">Código postal (5 dígitos)</label>
+		<input
+			type="text"
+			id="codigo-postal"
+			name="codigo_postal"
+			pattern="[0-9]{5}"
+			title="El código postal debe tener exactamente 5 dígitos"
+			required
+		>
+
+		<button type="submit">Enviar formulario completo</button>
+	</form>
+</body>
+</html>
