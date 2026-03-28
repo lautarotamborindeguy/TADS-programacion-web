@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 8 - Personalizando media</title>
+</head>
+<body>
+	<h1>Personalizando media</h1>
+
+	<h2>Audio con loop</h2>
+	<audio controls loop>
+		<source src="audios/ringtone.mp3" type="audio/mpeg">
+		Tu navegador no soporta el elemento de audio.
+	</audio>
+
+	<h2>Video con autoplay y muted</h2>
+	<video width="400" autoplay muted controls>
+		<source src="videos/video.mp4" type="video/mp4">
+		Tu navegador no soporta el elemento de video.
+	</video>
+
+    <p>Los navegadores modernos bloquean la reproducción automática de videos con sonido para evitarle molestias al usuario. Si el video tiene audio activo, es posible que no se reproduzca automáticamente sin una interacción previa.</p>
+</body>
+</html>

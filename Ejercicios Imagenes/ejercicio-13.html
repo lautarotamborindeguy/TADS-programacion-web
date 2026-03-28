@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Perfil social simple</title>
+	<style>
+		:root {
+			--fondo: #f5efe6;
+			--panel: #fffaf4;
+			--acento: #d97706;
+			--texto: #2c241c;
+			--suave: #7c6756;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: Verdana, sans-serif;
+			background: linear-gradient(180deg, #f1e4d1 0%, var(--fondo) 45%, #efe7db 100%);
+			color: var(--texto);
+		}
+
+		main {
+			max-width: 920px;
+			margin: 32px auto;
+			padding: 0 18px 32px;
+		}
+
+		.perfil {
+			background: var(--panel);
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 18px 40px rgba(44, 36, 28, 0.12);
+		}
+
+		.portada {
+			width: 100%;
+			height: 230px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.encabezado {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 18px;
+			align-items: center;
+			padding: 22px;
+		}
+
+		.avatar {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 4px solid #ffffff;
+			box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+		}
+
+		.info h1 {
+			margin: 0;
+			font-size: 2rem;
+		}
+
+		.usuario {
+			margin: 4px 0 10px;
+			color: var(--suave);
+		}
+
+		.descripcion {
+			margin: 0;
+			max-width: 560px;
+		}
+
+		.stats {
+			display: flex;
+			gap: 12px;
+			padding: 0 22px 22px;
+			flex-wrap: wrap;
+		}
+
+		.stat {
+			background: #fff3e2;
+			border-radius: 14px;
+			padding: 10px 14px;
+			min-width: 120px;
+		}
+
+		.stat strong {
+			display: block;
+			font-size: 1.1rem;
+		}
+
+		.seccion {
+			padding: 0 22px 22px;
+		}
+
+		.seccion h2 {
+			margin-bottom: 10px;
+			color: var(--acento);
+		}
+
+		video,
+		audio {
+			width: 100%;
+			max-width: 560px;
+			display: block;
+			border-radius: 12px;
+		}
+
+		@media (max-width: 640px) {
+			.encabezado {
+				justify-content: center;
+				text-align: center;
+			}
+
+			.stats {
+				justify-content: center;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section class="perfil">
+			<img class="portada" src="images/paisaje.jpg" alt="Imagen de portada del perfil">
+
+			<div class="encabezado">
+				<img class="avatar" src="images/lautaro.jpg" alt="Foto de perfil de Lautaro">
+				<div class="info">
+					<h1>Lautaro Tamborindeguy</h1>
+					<p class="usuario">@lautaro.tamborindeguy</p>
+					<p class="descripcion">
+						Amante de los paisajes, las rutas tranquilas y las escapadas de fin de semana.
+						Comparto momentos de viaje, clips breves y mi audio favorito para entrar en ambiente.
+					</p>
+				</div>
+			</div>
+
+			<div class="stats">
+				<div class="stat">
+					<strong>128</strong>
+					<span>publicaciones</span>
+				</div>
+				<div class="stat">
+					<strong>9.4k</strong>
+					<span>seguidores</span>
+				</div>
+				<div class="stat">
+					<strong>315</strong>
+					<span>siguiendo</span>
+				</div>
+			</div>
+
+			<div class="seccion">
+				<h2>Video destacado</h2>
+				<video controls>
+					<source src="videos/video.mp4" type="video/mp4">
+					Tu navegador no soporta el elemento de video.
+				</video>
+			</div>
+
+			<div class="seccion">
+				<h2>Audio del perfil</h2>
+				<audio controls>
+					<source src="audios/ringtone.mp3" type="audio/mpeg">
+					Tu navegador no soporta el elemento de audio.
+				</audio>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aventura de Viaje - Página Multimedia</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			line-height: 1.5;
+			background-color: #f3f7fb;
+			color: #1a2a3a;
+		}
+
+		header {
+			text-align: center;
+			background-color: #000;
+			color: rgb(255, 230, 0);
+			padding-bottom: 12px;
+		}
+
+		.banner {
+			display: block;
+			width: 100%;
+			height: 260px;
+			object-fit: cover;
+		}
+
+		main {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.galeria {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 12px;
+		}
+
+		.galeria img {
+			width: 100%;
+			height: 180px;
+			object-fit:contain;
+			border-radius: 8px;
+		}
+
+		.card {
+			background: #ffffff;
+			border-radius: 10px;
+			padding: 16px;
+			margin-top: 18px;
+		}
+
+		iframe,
+		audio {
+			width: 100%;
+			max-width: 720px;
+			display: block;
+			margin: 10px auto 0;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img class="banner" src="images/penarol.webp" alt="Escudo Club Atletico Peñarol">
+		<h1>Club Atletico Peñarol</h1>
+	</header>
+
+	<main>
+		<section class="card">
+			<h2>Galería del viaje</h2>
+			<div class="galeria">
+				<img src="images/camiseta-peñarol.webp" alt="Camiseta del club Peñarol">
+				<img src="images/cds.webp" alt="Estadio del club Peñarol">
+				<img src="images/escudo-penarol.webp" alt="Escudo del club Peñarol">
+			</div>
+		</section>
+
+		<section class="card">
+			<h2>Video incorporado</h2>
+			<iframe
+				height="405"
+				src="https://www.youtube.com/embed/9wUxSrqe5Bc"
+				title="Video de viaje"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen>
+			</iframe>
+		</section>
+
+		<section class="card">
+			<h2>Audio ambiental (opcional)</h2>
+			<audio controls>
+				<source src="audios/ringtone.mp3" type="audio/mpeg">
+				Tu navegador no soporta el elemento de audio.
+			</audio>
+		</section>
+	</main>
+</body>
+</html>
