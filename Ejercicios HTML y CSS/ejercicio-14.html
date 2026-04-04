@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 14 - Layout blog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", sans-serif;
+      background: #f0f3f5;
+      color: #223;
+    }
+
+    header {
+      background: #0d3b66;
+      color: #fff;
+      padding: 24px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1f6f8b;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 700;
+    }
+
+    .contenedor {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      align-items: flex-start;
+    }
+
+    main {
+      flex: 3;
+    }
+
+    article {
+      background: #fff;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    aside {
+      flex: 1;
+      background: #fffbe6;
+      padding: 14px;
+      border-radius: 8px;
+      border-left: 4px solid #f4a261;
+    }
+
+    footer {
+      background: #0d3b66;
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .contenedor {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Noticias Web Hoy</h1>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Tecnología</a>
+    <a href="#">Cultura</a>
+    <a href="#">Deportes</a>
+  </nav>
+
+  <div class="contenedor">
+    <main>
+      <article>
+        <h2>Nueva tendencia en desarrollo web</h2>
+        <p>El HTML semántico mejora la estructura, accesibilidad y mantenimiento de los sitios modernos.</p>
+      </article>
+      <article>
+        <h2>Consejos para organizar CSS</h2>
+        <p>Separar estilos en archivos externos ayuda a mantener proyectos más limpios y escalables.</p>
+      </article>
+    </main>
+
+    <aside>
+      <h3>Barra lateral</h3>
+      <p>Publicidad</p>
+      <p>Enlaces rápidos</p>
+      <p>Últimos comentarios</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>2026 - Noticias Web Hoy</p>
+  </footer>
+</body>
+</html>
