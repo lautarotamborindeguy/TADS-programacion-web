@@ -1,0 +1,72 @@
+/*
+Explicación:
+
+1. El body tiene color: blue → todos los elementos heredan ese color.
+2. El article tiene color: green → sobrescribe el color heredado.
+3. El párrafo con clase .destacado tiene color: red → tiene mayor prioridad que article.
+
+Orden de prioridad:
+Clase > Elemento > Herencia
+*/
+
+/* 1. Herencia desde body */
+body {
+    color: blue;
+    font-family: Arial;
+}
+
+/* Selector de elemento */
+header {
+    background-color: lightgray;
+    text-align: center;
+}
+
+/* Selector descendente */
+nav a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* Hover */
+nav a:hover {
+    color: red;
+}
+
+/* Selector de elemento */
+article {
+    border: 1px solid black;
+    padding: 10px;
+    color: green;
+}
+
+/* Selector descendente */
+article p {
+    color: purple;
+}
+
+/* Selector de clase */
+.destacado {
+    color: red;
+}
+
+/* Selector de hijo directo */
+main > section {
+    margin-bottom: 20px;
+}
+
+/* Selectores múltiples */
+h1, h2 {
+    font-weight: bold;
+}
+
+section p {
+    color: orange;
+}
+
+aside p {
+    color: inherit; /* o cualquier otro color */
+}
+
+main section p {
+    color: orange;
+}
