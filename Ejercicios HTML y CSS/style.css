@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f6f3ee;
+  color: #2f2a26;
+}
+
+header {
+  background: #2f2a26;
+  color: #fff6e8;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: #8a4f2c;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+section {
+  background: #fff;
+  margin: 16px;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+footer {
+  background: #3b6b5d;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+#prioridad {
+  color: green;
+}

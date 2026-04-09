@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 10 - Selectores combinados</title>
+  <style>
+    main p {
+      color: #1f4e79;
+    }
+
+    p.especial {
+      color: #8a2d3b;
+      font-weight: 700;
+    }
+
+    .contenedor > p#unico {
+      color: #2f7d32;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 10: Selectores combinados</h1>
+
+  <main class="contenedor">
+    <p>Este párrafo se estiliza con selector descendiente: main p.</p>
+    <p class="especial">Este párrafo se estiliza con selector combinado etiqueta+clase: p.especial.</p>
+    <p id="unico">Este párrafo se estiliza con selector hijo directo + ID: .contenedor > p#unico.</p>
+  </main>
+
+  <h2>Diferencia</h2>
+  <p>Un selector combinado une condiciones o relaciones entre elementos. Por ejemplo, main p selecciona párrafos dentro de main, p.especial selecciona solo párrafos con esa clase y .contenedor > p#unico selecciona un párrafo hijo directo con ese ID.</p>
+</body>
+</html>
