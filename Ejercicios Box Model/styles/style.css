@@ -1,0 +1,89 @@
+/* 
+Parte 3 - Uso de box-sizing global
+Como boa prática, mantemos o box-sizing border-box. 
+Sem ele ativado o layout 'quebra' e os elementos ficam maiores do que o width declarado.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container (main) */
+.container {
+    background-color: #e5e7eb; /* Fundo claro */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 12px;
+    
+    /* Parte 5: Flexbox para alinhar horizontalmente */
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Grante que se adapte em monitores pequenos */
+}
+
+/* Card (article) */
+.card {
+    width: 300px; /* Largura fixa */
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px; /* Padding interno */
+    border: 1px solid #d1d5db; /* Borda visível */
+    margin-top: 10px; /* Margem externa no topo */
+    
+    /* Parte 6: Refinamentos Visuais Modernos */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para o Hover */
+}
+
+/* Animação Card Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Header do Card */
+.card header h2 {
+    color: #1f2937; /* Título destacado */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    font-size: 1.4rem;
+}
+
+/* Conteúdo (section) */
+.card section p {
+    color: #4b5563;
+    line-height: 1.6; /* Line-height adequado para leitura */
+    font-size: 1rem;
+}
+
+/* Footer (Botão) */
+.card footer {
+    margin-top: 20px; /* Espaçamento superior do footer em relação ao p */
+}
+
+.card footer button {
+    width: 100%;
+    padding: 12px 20px; /* Padding no botão */
+    background-color: #3b82f6; /* Cor de fundo */
+    color: #ffffff;
+    border: none; /* Sem borda padrão */
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Hover no botão (Parte 6) */
+.card footer button:hover {
+    background-color: #2563eb;
+}
