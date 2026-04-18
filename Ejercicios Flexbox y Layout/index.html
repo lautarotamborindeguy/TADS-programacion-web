@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TechVerse Blog - Portal de tecnología, programación y desarrollo web con artículos y recursos actualizados.">
+    <title>TechVerse | Blog de Tecnología y Desarrollo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER (position: fixed) ===== -->
+    <header id="site-header">
+        <div class="header-inner">
+            <h1 id="site-title">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Tech<span class="logo-accent">Verse</span></span>
+            </h1>
+            <div class="header-search">
+                <input type="text" id="search-input" placeholder="Buscar artículos..." aria-label="Buscar artículos">
+                <button id="search-btn" aria-label="Buscar">🔍</button>
+            </div>
+        </div>
+
+        <!-- Elemento especial con position: absolute (badge/destaque) -->
+        <div id="special-badge" class="badge-highlight">
+            🔥 Nuevo
+        </div>
+    </header>
+
+    <!-- ===== NAV (position: sticky) ===== -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-link active" data-section="inicio">
+                <span class="nav-icon">🏠</span> Inicio
+            </a>
+            <a href="#" class="nav-link" data-section="articulos">
+                <span class="nav-icon">📝</span> Artículos
+            </a>
+            <a href="#" class="nav-link" data-section="tutoriales">
+                <span class="nav-icon">🎓</span> Tutoriales
+            </a>
+            <a href="#" class="nav-link" data-section="recursos">
+                <span class="nav-icon">📦</span> Recursos
+            </a>
+            <a href="#" class="nav-link" data-section="comunidad">
+                <span class="nav-icon">👥</span> Comunidad
+            </a>
+            <a href="#" class="nav-link" data-section="contacto">
+                <span class="nav-icon">✉️</span> Contacto
+            </a>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN (display: flex) ===== -->
+    <main id="main-content">
+
+        <!-- ===== SECTION (70%) ===== -->
+        <section id="content-section">
+
+            <!-- Hero card -->
+            <div class="hero-card" id="hero-card">
+                <div class="hero-tag">Destacado</div>
+                <h2 class="hero-title">Bienvenidos a TechVerse</h2>
+                <p class="hero-subtitle">Tu portal de referencia para tecnología, programación y desarrollo web.
+                    Descubrí artículos, tutoriales y recursos para potenciar tus habilidades.</p>
+                <button id="explore-btn" class="btn-primary">Explorar artículos →</button>
+            </div>
+
+            <!-- Card de artículos -->
+            <div class="articles-grid" id="articles-grid">
+
+                <!-- Artículo 1 -->
+                <article class="article-card" id="article-1">
+                    <div class="article-badge">CSS</div>
+                    <div class="article-header">
+                        <span class="article-category">🎨 Diseño Web</span>
+                        <span class="article-date">17 Abr 2026</span>
+                    </div>
+                    <h3 class="article-title">Flexbox vs Grid: Guía completa para elegir el layout correcto</h3>
+                    <p class="article-excerpt">
+                        Entender cuándo usar Flexbox y cuándo CSS Grid es fundamental para crear layouts modernos y
+                        eficientes. En este artículo exploramos las diferencias clave, casos de uso ideales y cómo
+                        combinar ambas técnicas para lograr diseños responsivos y flexibles.
+                    </p>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="author-avatar">JC</div>
+                            <span class="author-name">Juan Carlos W.</span>
+                        </div>
+                        <span class="article-read-time">⏱️ 8 min</span>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="article-card" id="article-2">
+                    <div class="article-badge article-badge--js">JS</div>
+                    <div class="article-header">
+                        <span class="article-category">💻 JavaScript</span>
+                        <span class="article-date">15 Abr 2026</span>
+                    </div>
+                    <h3 class="article-title">JavaScript moderno: las 10 features de ES2026 que necesitás conocer</h3>
+                    <p class="article-excerpt">
+                        Cada año ECMAScript trae novedades que transforman cómo escribimos código. Desde el pipeline
+                        operator hasta los records & tuples, repasamos las 10 features más impactantes de ES2026 con
+                        ejemplos prácticos y claros.
+                    </p>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="author-avatar author-avatar--alt">LT</div>
+                            <span class="author-name">Lautaro T.</span>
+                        </div>
+                        <span class="article-read-time">⏱️ 12 min</span>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="article-card" id="article-3">
+                    <div class="article-badge article-badge--html">HTML</div>
+                    <div class="article-header">
+                        <span class="article-category">🌐 HTML5</span>
+                        <span class="article-date">12 Abr 2026</span>
+                    </div>
+                    <h3 class="article-title">HTML semántico: por qué importa y cómo aplicarlo correctamente</h3>
+                    <p class="article-excerpt">
+                        El HTML semántico no solo mejora la accesibilidad y el SEO de tu sitio, sino que también hace tu
+                        código más legible y mantenible. Aprende a usar las etiquetas correctas para cada componente de
+                        tu página web.
+                    </p>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="author-avatar author-avatar--third">MR</div>
+                            <span class="author-name">María R.</span>
+                        </div>
+                        <span class="article-read-time">⏱️ 6 min</span>
+                    </div>
+                </article>
+
+                <!-- Artículo 4 -->
+                <article class="article-card" id="article-4">
+                    <div class="article-badge article-badge--tool">Tool</div>
+                    <div class="article-header">
+                        <span class="article-category">🛠️ Herramientas</span>
+                        <span class="article-date">10 Abr 2026</span>
+                    </div>
+                    <h3 class="article-title">VS Code en 2026: extensiones y configuraciones imprescindibles</h3>
+                    <p class="article-excerpt">
+                        Visual Studio Code sigue siendo el editor favorito de los desarrolladores. Descubrí las
+                        extensiones más útiles, temas modernos y configuraciones que van a multiplicar tu productividad
+                        este año.
+                    </p>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="author-avatar">JC</div>
+                            <span class="author-name">Juan Carlos W.</span>
+                        </div>
+                        <span class="article-read-time">⏱️ 10 min</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== ASIDE (30%) ===== -->
+        <aside id="sidebar">
+
+            <!-- Widget: Sobre nosotros -->
+            <div class="sidebar-widget" id="widget-about">
+                <h3 class="widget-title">Sobre TechVerse</h3>
+                <p class="widget-text">
+                    Somos una comunidad de desarrolladores apasionados por la tecnología. Compartimos conocimiento,
+                    experiencias y recursos para crecer juntos.
+                </p>
+                <div class="widget-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="stat-articles">127</span>
+                        <span class="stat-label">Artículos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="stat-authors">24</span>
+                        <span class="stat-label">Autores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="stat-readers">3.2k</span>
+                        <span class="stat-label">Lectores</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Widget: Categorías populares -->
+            <div class="sidebar-widget" id="widget-categories">
+                <h3 class="widget-title">Categorías populares</h3>
+                <div class="categories-list">
+                    <a href="#" class="category-tag" id="cat-html">HTML5</a>
+                    <a href="#" class="category-tag" id="cat-css">CSS3</a>
+                    <a href="#" class="category-tag" id="cat-js">JavaScript</a>
+                    <a href="#" class="category-tag" id="cat-react">React</a>
+                    <a href="#" class="category-tag" id="cat-node">Node.js</a>
+                    <a href="#" class="category-tag" id="cat-python">Python</a>
+                    <a href="#" class="category-tag" id="cat-git">Git</a>
+                    <a href="#" class="category-tag" id="cat-db">Databases</a>
+                    <a href="#" class="category-tag" id="cat-devops">DevOps</a>
+                    <a href="#" class="category-tag" id="cat-ia">IA / ML</a>
+                </div>
+            </div>
+
+            <!-- Widget: Links de recursos -->
+            <div class="sidebar-widget" id="widget-resources">
+                <h3 class="widget-title">Recursos útiles</h3>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://developer.mozilla.org" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">📚</span>
+                            <span>MDN Web Docs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://css-tricks.com" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">🎨</span>
+                            <span>CSS-Tricks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://javascript.info" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">💡</span>
+                            <span>JavaScript.info</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://flexboxfroggy.com" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">🐸</span>
+                            <span>Flexbox Froggy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://cssgridgarden.com" class="resource-link" target="_blank" rel="noopener">
+                            <span class="resource-icon">🌱</span>
+                            <span>Grid Garden</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Widget: Newsletter -->
+            <div class="sidebar-widget widget-newsletter" id="widget-newsletter">
+                <h3 class="widget-title">📬 Newsletter</h3>
+                <p class="widget-text">Recibí los mejores artículos directo en tu email, cada semana.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="tu@email.com"
+                        aria-label="Email para newsletter" required>
+                    <button type="submit" id="newsletter-btn" class="btn-primary btn-small">Suscribirme</button>
+                </form>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">Tech<span class="logo-accent">Verse</span></span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright" id="footer-copyright">
+                &copy; 2026 TechVerse — Todos los derechos reservados. Hecho con 💜 por la comunidad TADS.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón scroll to top (position: fixed) -->
+    <button id="scroll-top-btn" class="scroll-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
