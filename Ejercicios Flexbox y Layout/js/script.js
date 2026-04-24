@@ -1,10 +1,5 @@
-/* =========================================
-   TechVerse Blog — JavaScript interactivo
-   ========================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ----- Scroll to top button ----- //
     const scrollTopBtn = document.getElementById('scroll-top-btn');
 
     window.addEventListener('scroll', () => {
@@ -20,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Navegación activa ----- //
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
@@ -32,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Header shadow on scroll ----- //
     const header = document.getElementById('site-header');
 
     window.addEventListener('scroll', () => {
@@ -44,14 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Search interacción visual ----- //
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
 
     searchBtn.addEventListener('click', () => {
         const query = searchInput.value.trim();
         if (query) {
-            // Feedback visual rápido
             searchBtn.textContent = '✅';
             setTimeout(() => {
                 searchBtn.textContent = '🔍';
@@ -68,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Newsletter form ----- //
     const newsletterForm = document.getElementById('newsletter-form');
     const newsletterBtn = document.getElementById('newsletter-btn');
     const newsletterEmail = document.getElementById('newsletter-email');
@@ -78,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = newsletterEmail.value.trim();
 
         if (email) {
-            // Animación de éxito
             const originalText = newsletterBtn.textContent;
             newsletterBtn.textContent = '✅ ¡Suscrito!';
             newsletterBtn.style.background = '#34d399';
@@ -92,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Explore button scroll ----- //
     const exploreBtn = document.getElementById('explore-btn');
     const articlesGrid = document.getElementById('articles-grid');
 
@@ -101,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Article cards hover effect (tilt sutil) ----- //
     const articleCards = document.querySelectorAll('.article-card');
 
     articleCards.forEach(card => {
@@ -123,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ----- Stats counter animation ----- //
     const animateCounter = (element, target, suffix = '') => {
         const isK = target.toString().includes('.');
         const numericTarget = parseFloat(target);
@@ -134,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
 
-            // Easing: ease-out
             const eased = 1 - Math.pow(1 - progress, 3);
             const current = eased * numericTarget;
 
@@ -152,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(update);
     };
 
-    // Intersection Observer para los stats
     const statsSection = document.getElementById('widget-about');
     let statsAnimated = false;
 
@@ -170,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
     statsObserver.observe(statsSection);
 
 
-    // ----- Badge close después de un tiempo ----- //
     const badge = document.getElementById('special-badge');
     setTimeout(() => {
         badge.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -182,14 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 8000);
 
 
-    // ----- Category tags ripple effect ----- //
     const categoryTags = document.querySelectorAll('.category-tag');
 
     categoryTags.forEach(tag => {
         tag.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // Toggle active state
             tag.classList.toggle('active');
 
             if (tag.classList.contains('active')) {

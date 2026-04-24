@@ -1,12 +1,4 @@
-/* =========================================
-   TechVerse Blog — Estilos principales
-   Actividad Práctica: Layout Completo
-   HTML5 + CSS (Flexbox + Position)
-   ========================================= */
-
-/* ----- Variables & Design Tokens ----- */
 :root {
-    /* Paleta de colores */
     --clr-bg: #0f0f1a;
     --clr-bg-elevated: #16162a;
     --clr-bg-card: #1c1c35;
@@ -31,16 +23,13 @@
     --clr-red: #ef4444;
     --clr-cyan: #22d3ee;
 
-    /* Gradientes */
     --gradient-hero: linear-gradient(135deg, #7c5cfc 0%, #ec4899 50%, #f59e0b 100%);
     --gradient-card: linear-gradient(180deg, rgba(124, 92, 252, 0.06) 0%, transparent 100%);
     --gradient-header: linear-gradient(180deg, rgba(15, 15, 26, 0.98) 0%, rgba(15, 15, 26, 0.92) 100%);
 
-    /* Tipografía */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-    /* Espaciados */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -49,31 +38,25 @@
     --space-2xl: 3rem;
     --space-3xl: 4rem;
 
-    /* Bordes */
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 16px;
     --radius-xl: 20px;
     --radius-full: 9999px;
 
-    /* Sombras */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
     --shadow-glow: 0 0 20px var(--clr-accent-glow);
 
-    /* Header */
     --header-height: 64px;
     --nav-height: 48px;
 
-    /* Transiciones */
     --transition-fast: 150ms ease;
     --transition-base: 250ms ease;
     --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-/* ----- Reset & Base ----- */
 *,
 *::before,
 *::after {
@@ -125,17 +108,11 @@ input {
     outline: none;
 }
 
-
-/* =========================================
-   HEADER — position: fixed
-   ========================================= */
 #site-header {
     position: fixed;
-    /* ← REQUERIDO: position fixed */
     top: 0;
     left: 0;
     width: 100%;
-    /* ← REQUERIDO: width 100% */
     height: var(--header-height);
     background: var(--gradient-header);
     backdrop-filter: blur(16px);
@@ -156,7 +133,6 @@ input {
     justify-content: space-between;
 }
 
-/* Logo */
 #site-title {
     display: flex;
     align-items: center;
@@ -185,7 +161,6 @@ input {
 }
 
 @keyframes pulse-glow {
-
     0%,
     100% {
         filter: drop-shadow(0 0 6px var(--clr-accent-glow));
@@ -196,7 +171,6 @@ input {
     }
 }
 
-/* Search */
 .header-search {
     display: flex;
     align-items: center;
@@ -236,18 +210,10 @@ input {
     background: var(--clr-accent-subtle);
 }
 
-
-/* =========================================
-   BADGE ESPECIAL — position: absolute
-   (Parte 5: Elemento especial)
-   ========================================= */
 #special-badge {
     position: absolute;
-    /* ← REQUERIDO: position absolute */
     top: 10px;
-    /* ← REQUERIDO: top: 10px */
     right: 10px;
-    /* ← REQUERIDO: right: 10px */
     background: linear-gradient(135deg, var(--clr-red), var(--clr-orange));
     color: #fff;
     font-size: 0.72rem;
@@ -262,7 +228,6 @@ input {
 }
 
 @keyframes badge-bounce {
-
     0%,
     100% {
         transform: translateY(0);
@@ -273,13 +238,8 @@ input {
     }
 }
 
-
-/* =========================================
-   NAV — position: sticky
-   ========================================= */
 #main-nav {
     position: sticky;
-    /* ← REQUERIDO: position sticky */
     top: var(--header-height);
     margin-top: var(--header-height);
     background: var(--clr-bg-elevated);
@@ -294,7 +254,6 @@ input {
     margin: 0 auto;
     padding: 0 var(--space-xl);
     display: flex;
-    /* ← Links lado a lado con flexbox */
     align-items: center;
     gap: var(--space-xs);
     height: var(--nav-height);
@@ -328,20 +287,11 @@ input {
     font-size: 0.95rem;
 }
 
-
-/* =========================================
-   MAIN — display: flex
-   Section 70% + Aside 30%
-   ========================================= */
 #main-content {
     position: relative;
-    /* ← REQUERIDO: position relative en container */
     display: flex;
-    /* ← REQUERIDO: display flex en main */
     justify-content: center;
-    /* ← REQUERIDO: justify-content */
     gap: var(--space-xl);
-    /* ← REQUERIDO: gap entre elementos */
     max-width: 1280px;
     margin: var(--space-2xl) auto;
     padding: 0 var(--space-xl);
@@ -349,23 +299,17 @@ input {
 
 #content-section {
     flex: 7;
-    /* ← 70% del espacio */
     min-width: 0;
 }
 
 #sidebar {
     flex: 3;
-    /* ← 30% del espacio */
     min-width: 0;
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
 }
 
-
-/* =========================================
-   HERO CARD
-   ========================================= */
 .hero-card {
     background: var(--gradient-card);
     border: 1px solid var(--clr-border);
@@ -445,13 +389,8 @@ input {
     font-size: 0.82rem;
 }
 
-
-/* =========================================
-   ARTICLES GRID (cards con flexbox)
-   ========================================= */
 .articles-grid {
     display: flex;
-    /* ← Cards con flexbox */
     flex-wrap: wrap;
     gap: var(--space-lg);
 }
@@ -474,7 +413,6 @@ input {
         background var(--transition-base);
 }
 
-/* Badge en la card — position absolute */
 .article-badge {
     position: absolute;
     top: var(--space-md);
@@ -579,10 +517,6 @@ input {
     color: var(--clr-text-dim);
 }
 
-
-/* =========================================
-   SIDEBAR WIDGETS
-   ========================================= */
 .sidebar-widget {
     background: var(--clr-bg-card);
     border: 1px solid var(--clr-border);
@@ -609,7 +543,6 @@ input {
     line-height: 1.65;
 }
 
-/* Stats */
 .widget-stats {
     display: flex;
     gap: var(--space-md);
@@ -638,7 +571,6 @@ input {
     letter-spacing: 0.8px;
 }
 
-/* Categories */
 .categories-list {
     display: flex;
     flex-wrap: wrap;
@@ -664,7 +596,6 @@ input {
     transform: translateY(-1px);
 }
 
-/* Resources */
 .resource-list {
     display: flex;
     flex-direction: column;
@@ -691,7 +622,6 @@ input {
     font-size: 1.1rem;
 }
 
-/* Newsletter */
 .widget-newsletter {
     background: linear-gradient(135deg, rgba(124, 92, 252, 0.12), rgba(236, 72, 153, 0.08));
     border-color: var(--clr-accent);
@@ -723,10 +653,6 @@ input {
     color: var(--clr-text-dim);
 }
 
-
-/* =========================================
-   FOOTER
-   ========================================= */
 #site-footer {
     background: var(--clr-bg-elevated);
     border-top: 1px solid var(--clr-border);
@@ -779,15 +705,10 @@ input {
 
 .footer-copyright {
     text-align: center;
-    /* ← REQUERIDO: texto centralizado */
     color: var(--clr-text-dim);
     font-size: 0.8rem;
 }
 
-
-/* =========================================
-   SCROLL TO TOP BUTTON
-   ========================================= */
 .scroll-top {
     position: fixed;
     bottom: 30px;
@@ -827,10 +748,6 @@ input {
     box-shadow: var(--shadow-glow);
 }
 
-
-/* =========================================
-   RESPONSIVE DESIGN
-   ========================================= */
 @media (max-width: 960px) {
     #main-content {
         flex-direction: column;
@@ -901,12 +818,6 @@ input {
     }
 }
 
-
-/* =========================================
-   ANIMATIONS & EFFECTS
-   ========================================= */
-
-/* Entrada de los article cards */
 .article-card {
     opacity: 0;
     transform: translateY(20px);
@@ -936,7 +847,6 @@ input {
     }
 }
 
-/* Sidebar widgets entrada */
 .sidebar-widget {
     opacity: 0;
     transform: translateX(20px);
@@ -966,7 +876,6 @@ input {
     }
 }
 
-/* Hero card brillo sutil */
 .hero-card::after {
     content: '';
     position: absolute;
@@ -978,13 +887,11 @@ input {
     pointer-events: none;
 }
 
-/* Efecto de selección */
 ::selection {
     background: var(--clr-accent);
     color: #fff;
 }
 
-/* Scrollbar personalizado */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
