@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div class="icon">👤</div>
+        <h1>Cadastro de Usuário</h1>
+        <p class="subtitle">Preencha os dados abaixo para se cadastrar</p>
+      </div>
+
+      <form id="formulario" novalidate>
+
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input
+            type="text"
+            id="nome"
+            placeholder="Ex: João da Silva"
+            autocomplete="off"
+          >
+          <span class="erro" id="erro-nome"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Ex: joao@email.com"
+            autocomplete="off"
+          >
+          <span class="erro" id="erro-email"></span>
+        </div>
+
+        <!-- Desafio 1: telefone e idade -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              placeholder="Ex: (11) 99999-9999"
+              autocomplete="off"
+            >
+            <span class="erro" id="erro-telefone"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="idade">Idade</label>
+            <input
+              type="number"
+              id="idade"
+              placeholder="Ex: 25"
+              min="1"
+              max="120"
+            >
+            <span class="erro" id="erro-idade"></span>
+          </div>
+        </div>
+
+        <button type="submit" id="btn-salvar">
+          <span class="btn-icon">💾</span>
+          Salvar Cadastro
+        </button>
+
+      </form>
+
+      <div id="mensagem"></div>
+    </div>
+
+    <!-- Desafio 4: lista de usuários cadastrados -->
+    <div class="card lista-card" id="secao-lista" style="display:none;">
+      <div class="card-header">
+        <div class="icon">📋</div>
+        <h2>Usuários Cadastrados</h2>
+      </div>
+      <div id="lista-usuarios"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
